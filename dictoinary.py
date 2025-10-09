@@ -1,34 +1,55 @@
-best_buy_items = []
-item = {
+
+item_0 = {
     "name": "Luke Zheng's shirt",
-    "price": 3.00,
+    "price": "$9.99",
     "category": "Clothing",
     "stock": "One"
 }
 
-item = {
+item_1 = {
     "name": "Johnny Yuan's shoes",
-    "price": 70.00,
+    "price": "$69.99",
     "category": "Clothing",
     "stock": "Two"
 }  
 
-item = {
+item_2 = {
     "name": "Andrew Lee's hair",
-    "price": 15.00,
+    "price": "14.99",
     "category": "Costumes",
     "stock": "One"
 }
 
-item = {
+item_3 = {
     "name": "Ryan Chen's backpack",
-    "price": 45.00,
+    "price": "$44.99",
     "category": "Bags",
     "stock": "One"
 }
 
+item_4 = {
+    "name": "41-inch longsword",
+    "price": "$149.99",
+    "category": "Weapons",
+    "stock": "twelve"
+}
 
-best_buy_items[0]["price"]
+input("What item are you looking for? ")
+if ("0"):
+    print(item_0)
 
-for index, item in enumerate(best_buy_items):
-    print(index, ":", item["name"])
+input("What item are you looking for? ")
+if ("1"):
+    print(item_1)
+
+input("What item are you looking for? ")
+if ("2"):
+    print(item_2)
+
+input("What item are you looking for? ")
+if ("3"):
+    print(item_3)
+
+input("What item are you looking for? ")
+if ("4"):
+    print(item_4)
