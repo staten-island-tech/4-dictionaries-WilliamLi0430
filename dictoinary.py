@@ -31,25 +31,19 @@ item_4 = {
     "name": "41-inch longsword",
     "price": "$149.99",
     "category": "Weapons",
-    "stock": "twelve"
+    "stock": "Twelve"
 }
 
-input("What item are you looking for? ")
+input("What item are you looking for? ") 
 if ("0"):
     print(item_0)
-
-input("What item are you looking for? ")
-if ("1"):
+elif ("1"):
     print(item_1)
-
-input("What item are you looking for? ")
-if ("2"):
+elif ("2"):
     print(item_2)
-
-input("What item are you looking for? ")
-if ("3"):
+elif ("3"):
     print(item_3)
-
-input("What item are you looking for? ")
-if ("4"):
+elif ("4"):
     print(item_4)
+else:
+    print("Sorry, but we do not have the item you are looking for.")
