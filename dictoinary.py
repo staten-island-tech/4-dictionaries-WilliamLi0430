@@ -34,16 +34,26 @@ item_4 = {
     "stock": "Twelve"
 }
 
+item_5 = {
+    "name": "EasternBlueJay",
+    "price": "$1.99",
+    "category": "Discord username", 
+    "stock": "One"
+}
+
 input("What item are you looking for? ") 
-if ("0"):
+
+if input("0"):
     print(item_0)
-elif ("1"):
+elif input("1"):
     print(item_1)
-elif ("2"):
+elif input("2"):
     print(item_2)
-elif ("3"):
+elif input("3"):
     print(item_3)
-elif ("4"):
+elif input("4"):
     print(item_4)
+elif input("5"):
+    print(item_5)
 else:
     print("Sorry, but we do not have the item you are looking for.")
