@@ -37,5 +37,7 @@ items = [
     },
 ]
 
+for index, item in enumerate(items):
+    print(index, ":", item["name"])
 a = int(input("What item are you looking for? (0-5) "))
 print (items[a])
