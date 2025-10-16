@@ -1,5 +1,5 @@
 items = [
-    {
+    {   
         "name": "Luke Zheng's shirt",
         "price": "$9.99",
         "category": "Clothing",
@@ -17,21 +17,18 @@ items = [
         "category": "Costumes",
         "stock": "One"
     },
-
     {
         "name": "Ryan Chen's backpack",
         "price": "$44.99",
         "category": "Bags",
         "stock": "One"
     },
-
     {
         "name": "41-inch longsword",
         "price": "$149.99",
         "category": "Weapons",
         "stock": "Twelve"
     },
-
     {
         "name": "EasternBlueJay",
         "price": "$1.99",
@@ -40,4 +37,5 @@ items = [
     },
 ]
 
-print (items[5]["name"])
+a = int(input("What item are you looking for? (0-5) "))
+print (items[a])
