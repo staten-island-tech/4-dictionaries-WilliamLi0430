@@ -35,9 +35,21 @@ items = [
         "category": "Discord username", 
         "stock": "One"
     },
+    {
+        "name": "Github Desktop",
+        "price": "$5,000",
+        "category": "Online Services",
+        "stock": "Ten Thousand"
+    },
+    {
+        "name": "Tencent",
+        "price": "$722.39 billion",
+        "category": "Gaming",
+        "stock": "One"
+    }
 ]
 
 for index, item in enumerate(items):
     print(index, ":", item["name"])
-a = int(input("What item are you looking for? (0-5) "))
+a = int(input("What item(s) do you want to buy? (0-7) "))
 print (items[a])
