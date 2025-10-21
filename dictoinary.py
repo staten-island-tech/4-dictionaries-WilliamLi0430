@@ -49,7 +49,19 @@ items = [
     }
 ]
 
-for index, item in enumerate(items):
-    print(index, ":", item["name"])
-a = int(input("What item(s) do you want to buy? (0-7) "))
-print (items[a])
+cart = []
+e = 1
+while e == 1:
+    for index, item in enumerate(items):
+        print(index, ":", item["name"])
+    a = int(input("What item(s) do you want to buy? (0-7) "))
+    print (items[a]["price"])
+    cart.append(item["price"])
+    b = input("Do you wish to continue? ")
+    if b == ("yes") or b == ("Yes"):
+        e += 0
+    else:
+        e += 1
+
+cost = sum(cart)
+print(f"Your total is {cart}")
