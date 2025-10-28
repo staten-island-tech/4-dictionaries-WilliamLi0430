@@ -43,7 +43,7 @@ items = [
     },
     {
         "name": "Tencent",
-        "price": "$722.39 billion",
+        "price": "$722,000,000,000",
         "category": "Gaming",
         "stock": "One"
     }
@@ -55,13 +55,16 @@ while e == 1:
     for index, item in enumerate(items):
         print(index, ":", item["name"])
     a = int(input("What item(s) do you want to buy? (0-7) "))
-    print (items[a]["price"])
-    cart.append(item["price"])
+    cart.append(items[a]["price"])
+    cart.append(items[a]["name"])
     b = input("Do you wish to continue? ")
     if b == ("yes") or b == ("Yes"):
         e += 0
     else:
-        e += 1
-
-cost = sum(cart)
-print(f"Your total is {cart}")
+        print(cart)
+        t = input("Are you sure you want to buy these items? ")
+        if t == ("yes") or t == ("Yes"):
+            print("ha")
+            break
+        else:
+            print("Restarting...")
