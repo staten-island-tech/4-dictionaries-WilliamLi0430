@@ -59,6 +59,7 @@ while e == 1:
     cart.append(items[a]["price"])
     cart.append(items[a]["name"])
     cost += (float(items[a]["price"]))
+    rounding = round(cost, 3)
     b = input("Do you wish to continue? ")
     if b == ("yes") or b == ("Yes"):
         e += 0
@@ -66,7 +67,11 @@ while e == 1:
         print(cart)
         t = input("Are you sure you want to buy these items? ")
         if t == ("yes") or t == ("Yes"):
-            print(cost)
+            print(f"Your total is ${rounding}")
             break
         else:
-            print("Restarting...")
+            print(cart)
+            dumb = input("Which item do you want to remove?")
+            cart.remove(dumb("name"))
+            cart.remove(dumb("price"))
+            print(cart)
