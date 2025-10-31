@@ -52,7 +52,7 @@ items = [
 cart = []
 cost = 0
 e = 1
-while e == 1:
+while e == 1: 
     for index, item in enumerate(items):
         print(index, ":", item["name"])
     a = int(input("What item(s) do you want to buy? (0-7) "))
@@ -63,6 +63,7 @@ while e == 1:
     b = input("Do you wish to continue? ")
     if b == ("yes") or b == ("Yes"):
         e += 0
+        print(f"Your total is ${rounding}")
     else:
         print(cart)
         t = input("Are you sure you want to buy these items? ")
@@ -70,8 +71,8 @@ while e == 1:
             print(f"Your total is ${rounding}")
             break
         else:
-            print(cart)
             dumb = input("Which item do you want to remove?")
+            print(cart)
             cart.remove(dumb("name"))
             cart.remove(dumb("price"))
             print(cart)
