@@ -46,23 +46,28 @@ items = [
         "price": "722000000000",
         "category": "Gaming",
         "stock": "One"
+    },
+    {
+        "name": "Nothing",
+        "price": "0",
+        "category": "For nothing",
+        "stock": "Infinite"
     }
 ]
 
 cart = []
+money = []
 cost = 0
-e = 1
-while e == 1: 
+while True: 
     for index, item in enumerate(items):
         print(index, ":", item["name"])
     a = int(input("What item(s) do you want to buy? (0-7) "))
-    cart.append(items[a]["price"])
+    money.append(items[a]["price"])
     cart.append(items[a]["name"])
     cost += (float(items[a]["price"]))
     rounding = round(cost, 3)
     b = input("Do you wish to continue? ")
     if b == ("yes") or b == ("Yes"):
-        e += 0
         print(f"Your total is ${rounding}")
     else:
         print(cart)
@@ -71,8 +76,16 @@ while e == 1:
             print(f"Your total is ${rounding}")
             break
         else:
-            dumb = input("Which item do you want to remove?")
-            print(cart)
-            cart.remove(dumb("name"))
-            cart.remove(dumb("price"))
-            print(cart)
+            while True:
+                dumb = int(input("Which item do you want to remove?"))
+                print(cart)
+                del cart[dumb]
+                del money[dumb]
+                print(cart)
+                ask = input("Do you wish to continue removing items?")
+                if ask == ("No") or ("no"):
+                    ha = input("Do you want to continue buying items?")
+                if ha == ("No") or ("no"):
+                    print(f"Your total is ${rounding}")
+                    break
+        break
