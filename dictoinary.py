@@ -61,11 +61,14 @@ cost = 0
 while True: 
     for index, item in enumerate(items):
         print(index, ":", item["name"])
-    a = int(input("What item(s) do you want to buy? (0-7) "))
+    a = int(input("What item(s) do you want to buy? (0-8) "))
+    if a > 10  or a < 0:
+        print("Invalid item")
     money.append(items[a]["price"])
     cart.append(items[a]["name"])
     cost += (float(items[a]["price"]))
     rounding = round(cost, 3)
+    print(cart)
     b = input("Do you wish to continue? ")
     if b == ("yes") or b == ("Yes"):
         print(f"Your total is ${rounding}")
@@ -76,19 +79,21 @@ while True:
             print(f"Your total is ${rounding}")
             break
         else:
-            while True:
-                dumb = int(input("Which item do you want to remove?"))
+            while True:                
                 print(cart)
+                dumb = int(input("Which item do you want to remove? "))
                 del cart[dumb]
                 del money[dumb]
                 print(cart)
-                ask = input("Do you wish to continue removing items?")
-                if ask == ("No") or ("no"):
-                    ha = input("Do you want to continue buying items?")
-                elif ask == ("Yes") or ("yes"):
-                if ha == ("No") or ("no"):
-                    print(f"Your total is ${rounding}")
+                ask = input("Do you wish to continue removing items? ")
+
+                if ask == ("Yes") or ("yes"):
+                    print("Returning to remove screen:")
+                #fix this part
+                elif ask == ("No") or ("no"):
+                    print("Going back to the shop...")
                     break
                 else:
-                    print("Going back to the shop...")
-        break
+                    print("Invalid")
+                
+    
