@@ -85,7 +85,10 @@ while True:
                 ask = input("Do you wish to continue removing items?")
                 if ask == ("No") or ("no"):
                     ha = input("Do you want to continue buying items?")
+                elif ask == ("Yes") or ("yes"):
                 if ha == ("No") or ("no"):
                     print(f"Your total is ${rounding}")
                     break
+                else:
+                    print("Going back to the shop...")
         break
