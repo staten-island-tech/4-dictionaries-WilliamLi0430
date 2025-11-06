@@ -71,7 +71,7 @@ while True:
     print(cart)
     b = input("Do you wish to continue? ")
     if b == ("yes") or b == ("Yes"):
-        print(f"Your total is ${rounding}")
+        print(f"Your current total is ${rounding}")
     else:
         print(cart)
         t = input("Are you sure you want to buy these items? ")
@@ -86,7 +86,6 @@ while True:
                 del money[dumb]
                 print(cart)
                 ask = input("Do you wish to continue removing items? ")
-
                 if ask == ("Yes") or ("yes"):
                     print("Returning to remove screen:")
                 #fix this part
@@ -95,5 +94,3 @@ while True:
                     break
                 else:
                     print("Invalid")
-                
-    
